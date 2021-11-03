@@ -13,6 +13,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get("/test","App\Http\Controllers\adminController@test");
+
+
+
+
+Route::prefix("/admin")->group(function (){
+    Route::get("/","App\Http\Controllers\adminController@login")->name("admin.login");
+    Route::post("/login-submit","App\Http\Controllers\adminController@login_submit")->name("admin.login_submit");
+    Route::get("/logout","App\Http\Controllers\adminController@logout")->name("admin.logout");
+
+    Route::middleware(["admin"])->group(function (){
+        Route::get("/dashboard","App\Http\Controllers\adminController@dashboard")->name("admin.dashboard");
+
+
+
+    });
+
+
+
+
 });
