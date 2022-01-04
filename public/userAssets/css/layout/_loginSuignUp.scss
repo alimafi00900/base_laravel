@@ -1,0 +1,272 @@
+@import '../abstracts/mixin';
+@import '../abstracts/variables';
+
+.signUpLogin {
+    // @include flex(column, nowrap);
+    // align-items: center;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: $black-bg;
+    z-index: 100;
+    padding: 0;
+    overflow-y: hidden;
+    opacity: 0;
+    height: 0;
+    transition: all .3s ease;
+    @include responsive($sm) {
+        padding: 10px 5px;
+    }
+
+    &-box {
+        @include flex(column, nowrap);
+        align-items: flex-start;
+        text-align: right;
+        display: block;
+        margin: 0 auto;
+        max-width: 500px;
+        min-width: 320px;
+        background: $white;
+        padding: 20px;
+        border-radius: 15px;
+        transition: all .3s ease-in-out;
+        transform: translateY(-1500px);
+        &-header {
+            @include flex(row, nowrap);
+            justify-content: flex-start;
+            align-items: center;
+            padding: 17px 20px;
+            border-radius: 15px;
+            background-color: $graylighttwo;
+            margin-bottom: 50px;
+            position: relative;
+
+            h1 {
+                @include font($f20, 400, '');
+                color: $black;
+                @include responsive($sm){
+                    font-size: 18px !important;
+                 }
+            }
+
+            svg {
+                stroke: $pink;
+                margin-left: 10px;
+            }
+
+        }
+
+        &-body {
+            ul {
+                display: block;
+                margin: 0 auto;
+                width: 250px;
+                text-align: center;
+                border: none;
+                margin-bottom: 30px;
+                background: $graylighttwo;
+                padding: 5px !important;
+                border-radius: 15px;
+
+                li {
+                    display: inline-block;
+                    border: none;
+                    padding: 0;
+                    width: 49%;
+                    text-align: center;
+                    border-radius: 15px !important;
+
+                    button {
+                        width: 100%;
+                        margin: 0;
+                        color: $black;
+                        border-radius: 15px !important;
+                        padding: 15px 0 !important;
+                        transition: all .3s ease !important;
+                    }
+
+                    button.active {
+                        background: linear-gradient(90deg, $pink, $Purple) !important;
+                        color: $white !important;
+                    }
+
+                    button:hover {
+                        background: linear-gradient(90deg, $pink, $Purple) !important;
+                        color: $white !important;
+                        border: none;
+                    }
+                }
+            }
+        }
+
+
+    }
+}
+
+.formuser {
+    width: 100%;
+
+    form {
+        @include flex(column, nowrap);
+        align-items: flex-start;
+        width: 100%;
+        padding: 0 15px;
+
+        button {
+            width: 200px;
+            text-align: center;
+            margin: 0 auto;
+            color: $black;
+            border-radius: 15px !important;
+            padding: 13px 0 !important;
+            transition: all .3s ease !important;
+            background: linear-gradient(90deg, $pink, $Purple) !important;
+            color: $white !important;
+            border: none;
+            margin-bottom: 20px
+        }
+    }
+
+    &-input {
+        @include flex(column, nowrap);
+        align-items: flex-start;
+        width: 100%;
+        margin-bottom: 20px;
+        position: relative;
+
+        label {
+            @include font($f18, 300, 30px);
+            color: $black;
+            margin-bottom: 10px;
+            @include responsive($sm){
+                font-size: 16px !important;
+             }
+        }
+
+        input::-webkit-inner-spin-button {
+            appearance: none;
+        }
+
+        input {
+            width: 100%;
+            background: $bg-input;
+            border: 1px solid $graylighttwo;
+            border-radius: 15px;
+            padding: 13px 14px;
+            outline: none;
+            position: relative;
+            z-index: 1;
+
+            &::placeholder {
+                @include font($f14, 300, '');
+                color: $borderInput;
+                @include responsive($sm){
+                    font-size: 12px !important;
+                 }
+            }
+
+        }
+
+        input[type="number"] {
+            text-align: center;
+        }
+
+        input[type="number"]+input {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 62px;
+            z-index: 4;
+            padding: 7px 0 7px 7px;
+            margin-bottom: 7px;
+            text-align: center;
+            border: none;
+            border-radius: 15px 0 0 15px;
+            border-right: 1px solid #ccc;
+            direction: ltr;
+        }
+
+        &-code {
+            @include flex(row, wrap);
+            justify-content: flex-start;
+            align-items: center;
+
+            label {
+                flex: 0 1 100%;
+                width: 100%;
+            }
+
+            input {
+                width: calc(100% - 100px);
+            }
+
+            span {
+                @include font($f18, 600, '');
+                flex-grow: 1;
+                text-align: center;
+                color: $pink;
+                @include responsive($sm){
+                    font-size: 16px !important;
+                 }
+            }
+        }
+
+    }
+}
+
+.formuser-input-ch {
+    @include flex(row, nowrap);
+    justify-content: flex-start;
+    align-items: center;
+
+    label {
+        width: fit-content;
+    }
+
+    input {
+        width: fit-content;
+        margin-top: -5px;
+        margin-left: 10px;
+    }
+}
+
+.closelogin {
+    flex-grow: 1;
+    text-align: left;
+    cursor: pointer;
+    margin-top: 2px;
+    margin-left: -15px;
+    border: none;
+    background: none;
+    outline: none;
+    span {
+        @include shadow(10px, 25px);
+        background: $white;
+        border: none;
+        outline: none;
+        padding: 10px 10px 11px ;
+        border-radius: 10px;
+text-align: center;
+        svg {
+            width: 20px;
+            margin-left: 0;
+        }
+    }
+
+}
+.signUpLoginshow{
+    opacity: 1;
+    bottom: 0;
+    padding: 50px 5px;
+    height: 100%;
+    overflow-y: scroll;
+    @include responsive($sm) {
+        padding: 10px 5px;
+    }
+}
+.signUpLoginshow .signUpLogin-box{
+        transform: translateY(0) !important; 
+        -webkit-transform: translateY(0px) !important;
+}

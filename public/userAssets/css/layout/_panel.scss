@@ -1,0 +1,44 @@
+// components  
+
+@import "../components/panel/sidebar";
+@import "../components/panel/main";
+
+
+.header-orders{
+    @include flex(row, nowrap);
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: -20px;
+    padding: 0 20px;
+    width: 100%;
+    @include responsive($sm) {
+        @include flex(column, nowrap);
+    }
+    p{
+        @include font($f14, 300, 25px);
+        color: $black;
+    }
+    span{
+        @include font($f14, 500, 25px);
+        color: $black;
+        display: block;
+    }
+    button {
+        width: 200px;
+        text-align: center;
+        color: $black;
+        border-radius: 30px !important;
+        padding: 13px 0 !important;
+        transition: all .3s ease !important;
+        background: linear-gradient(90deg, $pink, $Purple) !important;
+        color: $white !important;
+        border: none;
+        margin-bottom: 20px
+    }
+}
+.pagination-SixSide-panel{
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

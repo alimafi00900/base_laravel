@@ -61,7 +61,7 @@
 					</div>
                     <div class="wrap-input100" style="display: flex;align-items: center;justify-content: space-between;">
                         <span>remember me</span>
-                        <input  type="checkbox"  name="remember">
+                        <input  type="checkbox"  name="remember" style="width: 23px;height: 23px;margin: 7px;">
                     </div>
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">

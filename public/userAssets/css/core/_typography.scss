@@ -1,0 +1,23 @@
+@import "../abstracts/mixin";
+@import "../abstracts/variables";
+body {
+    direction: rtl;
+    font-family:kalameh;
+    background: $grayBoday;
+    scroll-behavior: smooth;
+
+    button {
+        font-family:kalameh;
+    }
+
+    input,
+    textarea,
+    .persian-number {
+        font-family: kalameh;
+    }
+
+    @include responsive($sm){
+        
+    }
+ 
+}

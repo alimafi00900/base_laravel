@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="32.001" viewBox="0 0 30 32.001">
+  <g id="Group_6111" data-name="Group 6111" transform="translate(-740 -3724.999)">
+    <g id="Iconly_Bold_Info_Circle" data-name="Iconly/Bold/Info Circle" transform="translate(762 3716)">
+      <g id="Info_Circle" data-name="Info Circle" transform="translate(6.197 2.999)">
+        <path id="Info_Circle-2" data-name="Info Circle" d="M-13.5,6C-20.952,6-27,12.722-27,21s6.048,15,13.5,15S0,29.282,0,21-6.034,6-13.5,6Z" transform="translate(-0.197)" fill="#00b448"/>
+      </g>
+    </g>
+    <g id="Iconly_Bold_Info_Circle-2" data-name="Iconly/Bold/Info Circle" transform="translate(737 3722.002)">
+      <g id="Info_Circle-3" data-name="Info Circle" transform="translate(3 2.999)">
+        <path id="Info_Circle-4" data-name="Info Circle" d="M15,30a14.994,14.994,0,1,1,10.611-4.394A15.017,15.017,0,0,1,15,30Zm0-10.6a1.306,1.306,0,0,0-1.305,1.3A1.313,1.313,0,1,0,15,19.4Zm0-11.4a1.338,1.338,0,0,0-1.32,1.32v6.63a1.313,1.313,0,0,0,2.626,0V9.315A1.314,1.314,0,0,0,15,7.995Z" fill="#00b448"/>
+      </g>
+    </g>
+    <text id="_" data-name="؟" transform="matrix(-1, 0, 0, 1, 750, 3747)" fill="#fff" font-size="20" font-family="Kalameh-Bold, Kalameh" font-weight="700"><tspan x="-8.66" y="0">؟</tspan></text>
+  </g>
+</svg>

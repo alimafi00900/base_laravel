@@ -1,0 +1,208 @@
+@import "../../abstracts/mixin";
+@import "../../abstracts/variables";
+
+.sidebar {
+    @include flex(column, nowrap);
+    align-items: flex-start;
+    justify-content: flex-start;
+    direction: rtl;
+    height: 98%;
+    max-height: 98vh;
+    padding: 15px;
+    border-bottom: none;
+
+    button {
+        @include font($f16, 400, '');
+        width: 100%;
+        border: none !important;
+        text-align: right;
+        margin-bottom: 10px !important;
+        padding: 15px 15px 15px 0;
+        color: $black;
+        border-radius: 10px !important;
+        color: $black;
+        background: $graylighttwo;
+        background-color: $graylighttwo !important;
+        transition: all .3s;
+
+        svg {
+            width: 18px;
+            margin-left: 7px;
+            stroke: $black;
+        }
+
+        &:nth-child(1) svg {
+            stroke: $pink;
+        }
+
+    }
+
+    button.active {
+        background: linear-gradient(45deg, $pink, $Purple);
+        color: $white !important;
+
+        svg {
+            color: $white;
+            stroke: $white;
+        }
+    }
+
+    button:hover {
+        background: linear-gradient(45deg, $pink, $Purple);
+        color: $white !important;
+
+        svg {
+            color: $white;
+            stroke: $white;
+        }
+    }
+
+    &-profile {
+        @include flex(column, nowrap);
+        width: 100%;
+        align-items: center;
+        padding: 10px 10px;
+        margin-bottom: 10px;
+
+        &>dd {
+            width: 90px;
+            height: 90px;
+            border-radius: 50px;
+            border: 2px solid $pink;
+            padding: 2px;
+            margin-bottom: 30px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        div {
+            @include flex(row, nowrap);
+            width: 100%;
+            align-items: center;
+            position: relative;
+            justify-content: space-evenly;
+
+            dd {
+                position: absolute;
+                right: 0px;
+                left: 0;
+                bottom: 0px;
+
+                span {
+                    height: 25px;
+                    width: 1px;
+                    border-left: 1px solid #e6e6e6;
+                    display: block;
+                    margin: 0 auto;
+                    flex-grow: 0;
+                    padding-right: 5px;
+                }
+            }
+
+            a {
+                @include font($f14, 400, '');
+                margin-right: 5px;
+                color: $black;
+                text-decoration: none;
+                cursor: pointer;
+                position: relative;
+                z-index: 3;
+            }
+
+            a:nth-child(1) {
+                margin-left: 30px;
+            }
+        }
+
+    }
+}
+
+.header-item {
+    @include flex(row, nowrap);
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    background: $graylighttwo;
+    border-radius: 10px !important;
+    padding: 15px 20px;
+
+    a {
+        @include font($f16, 300, '');
+        margin: 0 7px;
+        stroke: $black;
+        color: $black;
+        text-decoration: none;
+    }
+
+    svg {
+        stroke: $black;
+        width: 6px;
+        margin-top: 5px;
+    }
+
+    &>svg:nth-child(2) {
+        stroke: $black;
+        width: 20px;
+        margin-top: 0px;
+    }
+
+    @include responsive($sm){
+        div{
+            display: none;
+        }
+    }
+}
+#Iconly_Light_Home {
+    stroke: $black;
+    width: 20px;
+    margin-top: 0px;
+}
+.panel-user-click {
+    transition: all .5s ease-in-out;
+}
+.panel-user-click {
+    @include responsive($lg) {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 50%;
+        z-index: 100;
+        transform: translateX(1000px);
+
+    }
+    @include responsive($md) {
+        width: 70%;
+    }
+    @include responsive($sm) {
+        width: 100%;
+    }
+}
+
+@include responsive($lg) {
+    .menu-mobile {
+        transform: translateX(0px);
+    }
+
+    .menu-mobile-btn {
+        border: none;
+        background: none;
+        margin-left: 15px;
+
+        svg {
+            width: 25px;
+            margin-top: 0px;
+        }
+
+    }
+}
+.marginclosepanel{
+    margin-left: 15px !important;
+    margin-bottom: -52px;
+    margin-top: 30px !important;
+    position: relative;
+    z-index: 10;
+}

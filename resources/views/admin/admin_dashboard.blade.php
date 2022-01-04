@@ -16,6 +16,7 @@
                                 </div>
                                 <p class="card-category">تعداد کارشناس و مدیر</p>
                                 <h3 class="card-title IRANSans">
+                                    {{\App\Models\adminUser::all()->count()}}
                                     <small>نفر</small>
                                 </h3>
                             </div>
@@ -37,6 +38,7 @@
                                 </div>
                                 <p class="card-category">شارژ پیامک</p>
                                 <h3 class="card-title IRANSans">
+                                    0
                                     <small>تومان</small>
                                 </h3>
                             </div>
@@ -44,6 +46,7 @@
                                 <a href="http://sms.gilasweb.ir">
                                     <div class="stats d-flex justify-content-center align-items-center">
                                         <i class="m-1 fas fa-sms"></i>
+                                        0
                                         پنل سامانه پیامکی
                                     </div>
                                 </a>
@@ -60,6 +63,7 @@
                                 </div>
                                 <p class="card-category">تعداد کل اعضا</p>
                                 <h3 class="card-title IRANSans">
+                                    {{\App\Models\User::all()->count()}}
                                     <small>نفر</small>
                                 </h3>
                             </div>
@@ -81,7 +85,7 @@
                                 </div>
                                 <p class="card-category">تعداد تحرکات مهم</p>
                                 <h3 class="card-title IRANSans">
-
+                                    0
                                     <small>مورد</small>
                                 </h3>
                             </div>

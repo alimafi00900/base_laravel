@@ -17,9 +17,17 @@ class User extends Authenticatable
      *
      * @var string[]
      */
+    public $primaryKey = 'ID';
+    protected $table='wp_users';
     protected $fillable = [
+        'ID',
         'name',
+        'basic_balance',
+        'basic_point',
         'email',
+        'status',
+        'display_name',
+        'user_login',
         'password',
     ];
 

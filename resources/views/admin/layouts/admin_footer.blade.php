@@ -4,15 +4,15 @@
             <ul>
                 <li>
                     <a href="">
-                    jkjjkkj
+
                     </a>
                 </li>
-
+            </ul>
         </nav>
         <div class="copyright float-right">
-            &copy;
+{{--            &copy;--}}
             <script>
-                document.write(new Date().getFullYear())
+                // document.write(new Date().getFullYear())
             </script>
 
         </div>

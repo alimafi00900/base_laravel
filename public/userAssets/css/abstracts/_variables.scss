@@ -1,0 +1,67 @@
+@import '../abstracts/mixin';
+// color 
+$white:#ffffff;
+$black:#000000;
+$bg-input:#F8F8F8;
+$grayBoday:#FCFCFC;
+$grayBodayZero:rgba(252, 252, 252, 0);
+$black-shadow:rgba(0, 0, 0, 0.05);
+$grauinput:#ECEBEB;
+$graydarck:#373737;
+$graylight:#707070;
+$borderInput:#d1d1d1;
+$pagination:#ececec;
+$bordercart:#e6e6e6;
+$borderbox:rgb(241, 241, 241);
+$graylighttwo:#f5f5f5;
+$pink:#CF67EE;
+$pinktwo:#C964EF;
+$Purple:#713CF6;
+$Purpletwo:#A956F1;
+$green:#57D681;
+$black-bg:rgba(0, 0, 0, 0.5);
+$red:#FF2323;
+$blue:#007AFF;
+
+
+
+//  responsive
+$xxl:1910;
+$xl:1198px;
+$lg:992px;
+$md:767px;
+$sm:578px;
+$mob:414px;
+$moblg:475px;
+$mobsm:373px;
+
+
+
+// font size
+$f12:12px;
+$f14:14px;
+$f16:16px;
+$f17:17px;
+$f18:18px;
+$f19:19px;
+$f20:20px;
+$f22:22px;
+$f24:24px;
+$f26:26px;
+$f28:28px;
+$f30:30px;
+$f45:45px;
+$xx:2px;
+@include responsiveMin($xxl){
+    $f12: 14px !important;
+    $f14: 16px !important;
+    $f16: 18px !important;
+    $f18: 20px !important;
+    $f19: 21px !important;
+    $f20: 22px !important;
+    $f22: 24px !important;
+    $f24: 26px !important;
+    $f26: 28px !important;
+    $f28: 30px !important;
+    $f30: 32px !important;
+}

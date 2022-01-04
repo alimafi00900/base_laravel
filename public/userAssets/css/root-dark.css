@@ -1,0 +1,104 @@
+:root {
+    --white: #323C57;
+    --black: #fff;
+    --bg-input: #424E71;
+    --grayBoday: #222539;
+    --grayBodayZero: rgba(252, 252, 252, 0);
+    --black-shadow:  rgba(0, 0, 0, 0.05);
+    --grauinput: #424E71;
+    --graydarck: #fff;
+    --graylight: #707070;
+    --borderInput: #E0E7FF;
+    --pagination: #E0E7FF;
+    --bordercart: #707070;
+    --borderbox: #707070;
+    --graylighttwo: #424E71;
+    --pink: #CF67EE;
+    --pinktwo:#C964EF;
+    --Purple: #713CF6;
+    --Purpletwo: #A956F1;
+    --green:#57D681;
+    --black-bg: rgba(0, 0, 0, 0.5);
+    --red: #FF2323;
+    --blue: #007AFF;
+    --f1:#707070;
+  }
+  p,button,dd,label, li ,h1 ,h2,h3,h4,h5,a{
+    color:#fff !important;
+  }
+  .form-gr-submit button span{
+    background: #FFF !important;
+  }
+  .button-purple span{
+    background: #FFF !important;
+  }
+  .pagination-SixSide ul li a{
+    color: #000 !important;
+  }
+  .sharing-link span{
+    color: #FFF !important;
+  }
+  .gift-cart span:nth-child(2){
+    color: #FFF !important;
+  }
+  .gift-cart-price-txt dd {
+    color: var(--green) !important;
+}
+.learn-more {
+  color: var(--blue) !important;
+}
+.sibar-list-blog span{
+  color: #FFF !important;
+}
+
+.sroll-login::-webkit-scrollbar , 
+.sroll::-webkit-scrollbar,
+.sroll-panel::-webkit-scrollbar{
+  background: #323C57 !important;
+} 
+.calender-user{
+  color: #FFF !important;
+}
+.blog-box-info-person-info span{
+  color: #FFF !important;
+}
+.header-orders button{
+  color: #FFF !important;
+}
+.sidebar button.active{
+  color: #fff !important;
+}
+.sidebar button.active svg{
+  stroke: #fff !important;
+}
+.sidebar button:hover{
+  color: #fff !important;
+}
+.sidebar button:hover svg{
+  stroke: #fff !important;
+}
+.footer-content-a{
+  border: 1px solid #fff !important;
+}
+.footer-content-a:hover{
+  border: 1px solid var(--pink) !important;
+}
+.header-search form button svg{
+  stroke: #fff !important;
+}
+.header-menuLogo span svg{
+  stroke: #fff !important;
+}
+.header-menuMB-content-close svg{
+  stroke: #fff !important;
+}
+.closelogin span svg{
+  stroke: #fff !important;
+}
+
+.d-n-dark{
+  display: none ;
+}
+.d-b-dark{
+  display: block;
+}

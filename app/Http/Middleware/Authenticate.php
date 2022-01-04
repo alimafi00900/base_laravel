@@ -2,7 +2,10 @@
 
 namespace App\Http\Middleware;
 
+use App\Models\User;
 use Illuminate\Auth\Middleware\Authenticate as Middleware;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\URL;
 
 class Authenticate extends Middleware
 {
@@ -14,8 +17,11 @@ class Authenticate extends Middleware
      */
     protected function redirectTo($request)
     {
+        if(Auth::check()){
+            User::where("ID",Auth::user()->ID)->update(["last_ip"=>$request->ip()]);
+        }
         if (! $request->expectsJson()) {
-            return route('login');
+            return URL::previous();
         }
     }
 }
