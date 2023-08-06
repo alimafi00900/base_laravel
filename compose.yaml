@@ -1,0 +1,118 @@
+version: '3.8'
+services:
+
+
+#  main_web:
+#    image: nginx
+#    restart: always
+#    volumes:
+#      - /root/irannova/configs/main_nginx_config/nginx.conf:/etc/nginx/nginx.conf
+#
+#      - /root/irannova/configs/main_nginx_config/conf.d/web.conf:/etc/nginx/conf.d/web.conf
+#      - /root/irannova/configs/main_nginx_config/ssl:/etc/nginx/ssl
+#    ports:
+#      - "443:443"
+#      - "80:80"
+#    networks:
+#      - web-service
+
+  user_web:
+    image: alimafi00900/php-7.4.2-apache_linux
+  # image: php-apache-ubuntu:v1.0.0
+    restart: always
+    volumes:
+      - /Users/alireza/Sites/htdocs/IE_Amin/configs/laravel-apache/default_1.conf:/etc/apache2/sites-enabled/000-default.conf
+      -  /Users/alireza/Sites/htdocs/IE_Amin/core:/var/www/core
+      - /Users/alireza/Sites/htdocs/IE_Amin/configs/laravel-apache/custom_php_config.ini:/etc/php/8.1/apache2/conf.d/custom_php_config.ini
+     ###################
+      - /Users/alireza/Sites/htdocs/IE_Amin/code.IE_AMIN:/var/www/repo
+    ########################
+    working_dir: /var/www/core/public
+    ports:
+      - "8080:80"
+#    environment:
+#      UPLOAD_LIMIT: 64M
+    networks:
+      - web-service
+    ################################
+
+#  wp1_user_web:
+#    # image: alimafi00900/php-7.4.2-apache_linux
+#    image: php-apache-ubuntu:v1.0.0
+#    restart: always
+#    volumes:
+#      - /root/irannova/configs/laravel-apache/default.conf:/etc/apache2/sites-enabled/000-default.conf
+#      - /root/irannova/web/wp1.irannova.shop/public:/var/www/core/public
+#      #- /root/irannova/web/core/storage:/var/www/core/storage
+#      - /root/irannova/configs/laravel-apache/custom_php_config.ini:/etc/php/8.1/apache2/conf.d/custom_php_config.ini
+#      ###################
+#      - /root/irannova/web/repo:/var/www/repo
+#    ########################
+#    working_dir: /var/www/core/public
+#    #    environment:
+#    #      UPLOAD_LIMIT: 300M
+##    ports:
+##      - 8080:80
+#    networks:
+#      - web-service
+#    ################################
+
+
+#########################
+#
+#  wp2_user_web:
+#   # image: alimafi00900/php-7.4.2-apache_linux
+#    image: php-apache-ubuntu:v1.0.0
+#    restart: always
+#    volumes:
+#      - /root/irannova/configs/laravel-apache/default.conf:/etc/apache2/sites-enabled/000-default.conf
+#      - /root/irannova/web/wp2.irannova.shop/public:/var/www/core/public
+#      - /root/irannova/web/core/storage:/var/www/core/storage
+#      - /root/irannova/configs/laravel-apache/custom_php_config.ini:/etc/php/8.1/apache2/conf.d/custom_php_config.ini
+#      ###################
+#      - /root/irannova/web/repo:/var/www/repo
+#    ########################
+#    working_dir: /var/www/core/public
+##    environment:
+##      UPLOAD_LIMIT: 300M
+##    ports:
+##      - 8080:80
+#    networks:
+#      - web-service
+#    ################################
+
+
+  db:
+    image: mysql:8.0.30
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: "wsFOF&amp;VwGROABS6uJQBy@QD"
+      MYSQL_DATABASE: MYSQL_DATABASE
+#    ports:
+#      - 3306:3306
+#    platform: linux/x86_64
+    volumes:
+      -  /Users/alireza/db2:/var/lib/mysql
+      #- /root/irannova/backups:/core
+    networks:
+      - web-service
+
+  ##########################
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+#    ports:
+#      - 8888:80
+    restart: always
+
+    environment:
+      PMA_HOST: db
+      UPLOAD_LIMIT: 300M
+    depends_on:
+      - db
+    networks:
+      - web-service
+
+  #######################
+
+networks:
+  web-service:

@@ -21,8 +21,14 @@ class adminUser extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'role',
+        'user_nicename',
+        'status',
         'display_name',
         'password',
+        'permissions' ,
+        'TicketSubjectsPermission' ,
+        'TicketProductPermission' ,
     ];
 
     /**

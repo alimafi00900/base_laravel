@@ -1,0 +1,631 @@
+{
+  "template_title": "دسته بندی ها",
+  "table": "product_categories",
+  "sections": {
+    "all": true,
+    "add": true,
+    "edit": true,
+    "delete": true,
+    "multiple_delete": true
+  },
+  "fields": {
+    "id": {
+      "name_fa": "شماره",
+      "sections": {
+        "all": true,
+        "search": true
+      },
+      "templates": {
+        "all": {
+          "name": "text"
+        }
+      }
+    },
+    "index_num": {
+      "name_fa": "شماره ردیف",
+      "type": "text",
+      "default_value": "9999999",
+      "sections": {
+        "all": true,
+        "add": true,
+        "edit": true,
+        "search": false
+      },
+      "requests": [],
+      "templates": {
+        "all": {
+          "name": "input_text",
+          "type": "number",
+          "required": true
+        },
+        "add": {
+          "name": "number"
+        },
+        "edit": {
+          "name": "number"
+        }
+      }
+    },
+    "img_link": {
+      "name_fa": "عکس اصلی",
+      "tip": "عکس اصلی محصول که در صفحه دسته بندی نمایش داده میشود",
+      "sections": {
+        "add": true,
+        "edit": true
+      },
+      "type": "img",
+      "path_db": "/uploads/",
+      "path_folder": "/uploads/",
+      "path_folder_type": "public",
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "required|image|mimes:jpeg,png,jpg,ico|max:20048"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "image|mimes:jpeg,png,jpg,ico|max:20048"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "img"
+        },
+        "add": {
+          "name": "img"
+        },
+        "edit": {
+          "name": "img"
+        }
+      }
+    },
+    "poster": {
+      "name_fa": "پوستر",
+      "tip": "عکس بنر برای صفحه هر محصول می باشد",
+      "sections": {
+        "add": true,
+        "edit": true
+      },
+      "type": "img",
+      "path_db": "/uploads/",
+      "path_folder": "/uploads/",
+      "path_folder_type": "public",
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "required|image|mimes:jpeg,png,jpg,ico|max:20048"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "image|mimes:jpeg,png,jpg,ico|max:20048"
+        }
+      },
+      "templates": {
+        "add": {
+          "name": "img"
+        },
+        "edit": {
+          "name": "img"
+        }
+      }
+    },
+    "title": {
+      "name_fa": "سرتیتر",
+      "sections": {
+        "all": true,
+        "add": true,
+        "edit": true,
+        "search": true
+      },
+      "type": "text",
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "required|max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "required|max:255"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "text"
+        },
+        "add": {
+          "name": "text"
+        },
+        "edit": {
+          "name": "text"
+        }
+      }
+    },
+    "status": {
+      "name_fa": "وضعیت",
+      "sections": {
+        "all": true,
+        "add": true,
+        "edit": true
+      },
+      "type": "select",
+      "default_value": "active",
+      "select_options": {
+        "active": {
+          "name_fa": "فعال",
+          "class": "bg-success"
+        },
+        "deactivate": {
+          "name_fa": "غیر فعال",
+          "class": "bg-danger"
+        }
+      },
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "max:255"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "select"
+        },
+        "add": {
+          "name": "select"
+        },
+        "edit": {
+          "name": "select"
+        }
+      }
+    },
+    "slug": {
+      "name_fa": "لینک",
+      "slug_link": "/product-category/",
+      "slug_to": "title",
+      "sections": {
+        "all": true,
+        "add": true,
+        "edit": true
+      },
+      "type": "slug",
+      "requests": {
+        "edit_submit": {
+          "status": true,
+          "types": "required|max:255"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "link"
+        },
+        "add": {
+          "name": "text"
+        },
+        "edit": {
+          "name": "text"
+        }
+      }
+    },
+    "branches": {
+      "name_fa": "شاخه",
+      "sections": {
+        "all": true,
+        "add": true,
+        "edit": true
+      },
+      "type": "select-ref",
+      "select_options": {
+        "type": "table",
+        "table": "branches",
+        "title": "display_name",
+        "value": "id"
+      },
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "required"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "required"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "select-ref"
+        },        "add": {
+          "name": "select-ref"
+        },
+        "edit": {
+          "name": "select-ref"
+        }
+      }
+    },
+    "use_sort": {
+      "name_fa": "زیر مجموعه",
+      "sections": {
+        "add": true,
+        "edit": true
+      },
+      "type": "select",
+      "default_value": "deactivate",
+      "select_options": {
+        "active": {
+          "name_fa": "فعال",
+          "class": "bg-success"
+        },
+        "deactivate": {
+          "name_fa": "غیر فعال",
+          "class": "bg-danger"
+        }
+      },
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "max:255"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "select"
+        },
+        "add": {
+          "name": "select"
+        },
+        "edit": {
+          "name": "select"
+        }
+      }
+    },
+    "sorts": {
+      "name_fa": "زیر مجموعه ها",
+      "sections": {
+        "add": true,
+        "edit": true
+      },
+      "type": "json",
+      "json_pattern": {
+        "title": " ",
+        "type": "array",
+        "format": "table",
+        "items": {
+          "type": "object",
+          "title": "دسته بندی",
+          "properties": {
+            "name": {
+              "title": "(انگلیسی) (بدون فاصله) کلید دسته بندی",
+              "type": "string"
+            },
+            "name_fa": {
+              "title": "نام نمایشی دسته بندی (فارسی)",
+              "type": "string"
+            }
+          }
+        }
+      },
+      "requests": {
+        "add_submit": {
+          "status": false,
+          "types": ""
+        },
+        "edit_submit": {
+          "status": false,
+          "types": ""
+        }
+      },
+      "templates": {
+        "add": {
+          "name": "json"
+        },
+        "edit": {
+          "name": "json"
+        }
+      }
+    },
+    "source_type": {
+      "name_fa": "سورس مطالب",
+      "tip": "با این فیلد مشخص میکند که برای محتویات توضیحات از ویرایش گر متن لاراول کنید یا  وردپرس .",
+      "sections": {
+        "add": true,
+        "edit": true
+      },
+      "type": "select",
+      "default_value": "laravel",
+      "select_options": {
+        "laravel": {
+          "name_fa": "لاراول",
+          "class": "bg-success"
+        },
+        "wp": {
+          "name_fa": "ورد پرس",
+          "class": "bg-danger"
+        }
+      },
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "max:255"
+        }
+      },
+      "templates": {
+        "add": {
+          "name": "select"
+        },
+        "edit": {
+          "name": "select"
+        }
+      }
+    },
+    "wp_post_id": {
+      "name_fa": "ایدی پست ورد پرس",
+      "sections": {
+        "add": true,
+        "edit": true
+      },
+      "type": "number",
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "max:255"
+        }
+      },
+      "templates": {
+        "add": {
+          "name": "number"
+        },
+        "edit": {
+          "name": "number"
+        }
+      }
+    },
+    "share_link_1": {
+      "name_fa": "لینک اشتراک ۱",
+      "sections": {
+        "add": true,
+        "edit": true
+      },
+      "type": "text",
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "max:255"
+        }
+      },
+      "templates": {
+        "add": {
+          "name": "text"
+        },
+        "edit": {
+          "name": "text"
+        }
+      }
+    },
+    "share_link_2": {
+      "name_fa": "لینک اشتراک ۲",
+      "sections": {
+        "add": true,
+        "edit": true
+      },
+      "type": "text",
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "max:255"
+        }
+      },
+      "templates": {
+        "add": {
+          "name": "text"
+        },
+        "edit": {
+          "name": "text"
+        }
+      }
+    },
+    "share_link_3": {
+      "name_fa": "لینک اشتراک ۳",
+      "sections": {
+        "add": true,
+        "edit": true
+      },
+      "type": "text",
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "max:255"
+        }
+      },
+      "templates": {
+        "add": {
+          "name": "text"
+        },
+        "edit": {
+          "name": "text"
+        }
+      }
+    },
+    "notices": {
+      "name_fa": "اطلاعیه ها",
+      "sections": {
+        "add": true,
+        "edit": true
+      },
+      "type": "text",
+      "requests": {
+        "add_submit": {
+          "status": false,
+          "types": "required"
+        },
+        "edit_submit": {
+          "status": false,
+          "types": "required"
+        }
+      },
+      "templates": {
+        "add": {
+          "name": "textarea",
+          "properties": {
+            "rows": "10"
+          }
+        },
+        "edit": {
+          "name": "textarea",
+          "properties": {
+            "rows": "10"
+          }
+        }
+      }
+    },
+    "chart_status": {
+      "name_fa": "وضعیت چارت سود",
+      "tip": "با فعال کردن این گزینه سود تمامی محصولات زیر شاخه این بخش در چارت سود دهی نمایش داده میشوند",
+      "sections": {
+        "add": true,
+        "edit": true
+      },
+      "type": "select",
+      "default_value": "deactivate",
+      "select_options": {
+        "active": {
+          "name_fa": "فعال",
+          "class": "bg-success"
+        },
+        "deactivate": {
+          "name_fa": "غیر فعال",
+          "class": "bg-danger"
+        }
+      },
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "max:255"
+        }
+      },
+      "templates": {
+        "add": {
+          "name": "select"
+        },
+        "edit": {
+          "name": "select"
+        }
+      }
+    },
+    "conditions": {
+      "name_fa": "شرایط و قوانین",
+      "tip": "با پر کردن این بخش قبل از پرداخت سفارش از کاربر تاییدیه من با قوانین موفق هستم می اید",
+      "sections": {
+        "add": true,
+        "edit": true
+      },
+      "type": "text",
+      "requests": {
+        "add_submit": {
+          "status": false,
+          "types": "required"
+        },
+        "edit_submit": {
+          "status": false,
+          "types": "required"
+        }
+      },
+      "templates": {
+        "add": {
+          "name": "textarea",
+          "properties": {
+            "rows": "6"
+          }
+        },
+        "edit": {
+          "name": "textarea",
+          "properties": {
+            "rows": "6"
+          }
+        }
+      }
+    },
+    "content": {
+      "name_fa": "توضیحات",
+      "sections": {
+        "add": true,
+        "edit": true
+      },
+      "type": "text",
+      "requests": {
+        "add_submit": {
+          "status": false,
+          "types": "required"
+        },
+        "edit_submit": {
+          "status": false,
+          "types": "required"
+        }
+      },
+      "templates": {
+        "add": {
+          "name": "textarea-tinymce",
+          "properties": {
+            "rows": "24"
+          }
+        },
+        "edit": {
+          "name": "textarea-tinymce",
+          "properties": {
+            "rows": "24"
+          }
+        }
+      }
+    },
+    "forms": {
+      "name_fa": "فرم خرید",
+      "sections": {
+        "add": true,
+        "edit": true
+      },
+      "type": "text",
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "required"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "required"
+        }
+      },
+      "templates": {
+
+      }
+    }
+  }
+}

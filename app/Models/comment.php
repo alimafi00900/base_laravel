@@ -7,6 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class comment extends Model
 {
-    use HasFactory;
-    protected $table ="comments";
+    use HasFactory; 
+    // protected $table = "comments";
+    // protected $guarded = [];
+
+
+
+
+    public function answers(){
+        return $this->hasMany(comment::class , 'answered_to');
+    }
+
 }

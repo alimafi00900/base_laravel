@@ -1,0 +1,25 @@
+{
+  "template_title": "محصولات",
+  "table": "products",
+  "sections": {
+    "all": true,
+    "add": true,
+    "edit": true,
+    "delete": true,
+    "multiple_delete": true
+  },
+  "fields": {
+    "id": {
+      "name_fa": "شماره",
+      "sections": {
+        "all": true,
+        "search": true
+      },
+      "templates": {
+        "all": {
+          "name": "text"
+        }
+      }
+    }
+  }
+}

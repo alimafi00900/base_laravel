@@ -17,11 +17,8 @@ class Authenticate extends Middleware
      */
     protected function redirectTo($request)
     {
-        if(Auth::check()){
-            User::where("ID",Auth::user()->ID)->update(["last_ip"=>$request->ip()]);
-        }
         if (! $request->expectsJson()) {
-            return URL::previous();
+            return route('user.index');
         }
     }
 }

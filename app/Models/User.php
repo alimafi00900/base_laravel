@@ -17,18 +17,29 @@ class User extends Authenticatable
      *
      * @var string[]
      */
-    public $primaryKey = 'ID';
-    protected $table='wp_users';
+
+     // protected $table='users';
     protected $fillable = [
-        'ID',
+        'id',
         'name',
-        'basic_balance',
+        'auth_with_pic_status',
+        'auth_with_phone_status',
         'basic_point',
+        'referral_marketer_id',
+        'referral_marketer_timestamp',
+        'marketer_balance',
+        'marketer_status',
+        'marketer_balance',
+        'marketer_link',
         'email',
         'status',
         'display_name',
-        'user_login',
-        'password',
+        'phone_number',
+        'password', 
+        "CREDIT" ,
+        'avatar' ,
+        'nationalCode' ,
+        'bank_card'
     ];
 
     /**
@@ -49,4 +60,17 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    public function tickets(){
+        return $this->hasMany(Ticket::class)->whereNull('answered_to')->orderByDesc('status')->orderByDesc('updated_at');
+    }
+
+
+
+    public function comments(){
+        return $this->hasMany(comments::class , 'user_id')->whereNull('answered_to');
+        
+    }
+    
 }

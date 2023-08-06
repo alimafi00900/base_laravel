@@ -26,7 +26,6 @@ class Handler extends ExceptionHandler
         'password',
         'password_confirmation',
     ];
-
     /**
      * Register the exception handling callbacks for the application.
      *
@@ -34,8 +33,13 @@ class Handler extends ExceptionHandler
      */
     public function register()
     {
-        $this->reportable(function (Throwable $e) {
-            //
-        });
+//        $this->reportable(function (Throwable $e) {
+//            $msg = "ERROR 500\n";
+//            $msg.="message: ".$e->getMessage()."\n";
+//            $msg.="line: ".$e->getLine()."\n";
+//            $msg.="file: ".$e->getFile()."\n";
+//            $msg.="code: ".$e->getCode()."\n";
+//            reportToDev($msg);
+//        });
     }
 }

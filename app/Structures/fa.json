@@ -1,0 +1,95 @@
+{
+  "template_title": "fa",
+  "table": "orders",
+  "all_filter": [
+    {
+      "type": "where",
+      "column": "fa",
+      "operator": "=",
+      "value": "active"
+    }
+  ],
+  "sections": {
+    "all": true,
+    "add": true,
+    "edit":true,
+    "single": true,
+    "delete": true,
+    "multiple_delete": true
+  },
+  "fields": {
+    "id": {
+      "name_fa": "شماره",
+      "sections": {
+        "all": true,
+        "search": true
+      },
+      "templates": {
+        "all": {
+          "name": "text"
+        }
+      }
+    },
+    "profit": {
+      "name_fa": "سود",
+      "sections": {
+        "all": true,
+        "edit": true,
+        "add": true
+      },
+      "type": "number",
+      "templates": {
+        "all": {
+          "name": "price"
+        },
+        "edit":{
+          "name": "number"
+        },
+        "add":{
+          "name": "number"
+        }
+      }
+    },
+    "amount": {
+      "name_fa": "مبلغ",
+      "sections": {
+        "all": true,
+        "edit": true,
+        "add": true
+      },
+      "type": "number",
+      "templates": {
+        "all": {
+          "name": "price"
+        },
+        "edit":{
+          "name": "number"
+        },
+        "add":{
+          "name": "number"
+        }
+      }
+    },
+    "date": {
+      "name_fa": "تاریخ",
+      "sections": {
+        "all": true,
+        "edit": true,
+        "add": true
+      },
+      "type": "number",
+      "templates": {
+        "all": {
+          "name": "price"
+        },
+        "edit":{
+          "name": "number"
+        },
+        "add":{
+          "name": "number"
+        }
+      }
+    }
+  }
+}
+

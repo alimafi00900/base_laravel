@@ -1,0 +1,112 @@
+[
+  {
+    "name_fa": "داشبورد",
+    "route": "admin.dashboard",
+    "icon": "bi bi-grid-fill"
+  },
+  {
+    "name_fa": "مدیریت محصولات",
+    "route": [
+      "admin.productCategories",
+      "admin.products",
+      "admin.branches"
+    ],
+    "icon": "fas fa-boxes",
+    "lis": [
+      {
+        "name_fa": "انواع  ها",
+        "route": "admin.addsTypes",
+        "icon": "fas fa-shopping-bag"
+      },
+      {
+        "name_fa": "  ها",
+        "route": "admin.adds",
+        "icon": "fas fa-shopping-bag"
+      }
+    ]
+  },
+  {
+    "name_fa": "تراکنش ها",
+    "route": [
+      "admin.walletTransactions",
+      "admin.onlinePayments",
+      "admin.returnMoneyLogs"
+    ],
+    "icon": "fas fa-sync",
+    "lis": [
+      {
+        "name_fa": "کیف پولی",
+        "route": "admin.walletTransactions",
+        "icon": "fas fa-wallet"
+      },
+      {
+        "name_fa": "درگاه اینترنتی",
+        "route": "admin.onlinePayments",
+        "icon": "fas fa-globe"
+      },
+      {
+        "name_fa": "پول های مرجوعی",
+        "route": "admin.returnMoneyLogs",
+        "icon": "fas fa-undo"
+      }
+    ]
+  },
+  {
+    "name_fa": "مدیریت محتوا",
+    "route": ["admin.articles","admin.notices"],
+    "icon": "fas fa-pen-square",
+    "lis": [
+      {
+        "name_fa": "امتیاز ها",
+        "route": "admin.points",
+        "icon": "fa fa-star"
+      },
+      
+      {
+        "name_fa": "مقالات",
+        "route": "admin.articles",
+        "icon": "fas fa-newspaper"
+      }
+    ]
+  },
+  {
+    "name_fa": "کاربران",
+    "route": "admin.users",
+    "icon": "fa fa-user-friends"
+  },
+  {
+    "name_fa": "ادمین ها",
+    "route": "admin.adminUsers",
+    "icon": "fa fa-user-shield"
+  },
+  {
+    "name_fa": "فایل منیجر",
+    "route": "admin.fileManager",
+    "icon": "bi bi-folder"
+  },
+  {
+    "name_fa": "مدیریت منو",
+    "route": "admin.navLinks",
+    "icon": "fa fa-ellipsis-h"
+  },
+  {
+    "name_fa": "محتوای قالب",
+    "route": "admin.templates",
+    "icon": "bi bi-layout-wtf"
+  },
+  {
+    "name_fa": "تنظیمات",
+    "route": "admin.settings",
+    "icon": "bi bi-gear-wide-connected"
+  },
+  {
+    "name_fa": "تنظیمات عمومی",
+    "route": "admin.generalInfo_edit",
+    "icon": "bi bi-gear-wide-connected"
+  },
+  {
+    "name_fa": "خروج",
+    "route": "admin.logout",
+    "icon": "bi bi-box-arrow-right"
+  }
+]

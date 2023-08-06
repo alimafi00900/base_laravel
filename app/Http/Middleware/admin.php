@@ -22,7 +22,7 @@ class admin
             adminUser::where("id", Auth::guard("admin")->user()->id)->update(["last_ip"=> $request->ip()]);
             return $next($request);
         } else {
-            return abort(403);
+            return redirect(route('admin.login'));
         }
 
     }

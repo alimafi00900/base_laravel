@@ -1,0 +1,160 @@
+{
+  "template_title": "شاخه ها",
+  "table": "branches",
+  "sections": {
+    "all": true,
+    "add": true,
+    "edit": true,
+    "delete": true,
+    "multiple_delete": true
+  },
+  "fields": {
+    "id": {
+      "name_fa": "شماره",
+      "sections": {
+        "all": true,
+        "search": true
+      },
+      "templates": {
+        "all": {
+          "name": "text"
+        }
+      }
+    },
+    "display_name": {
+      "name_fa": "نام نمایشی",
+      "sections": {
+        "all": true,
+        "add": true,
+        "edit": true,
+        "search": true
+      },
+      "type": "text",
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "required|max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "required|max:255"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "text"
+        },
+        "add": {
+          "name": "text"
+        },
+        "edit": {
+          "name": "text"
+        }
+      }
+    },
+    "status": {
+      "name_fa": "وضعیت",
+      "sections": {
+        "all": true,
+        "add": true,
+        "edit": true
+      },
+      "type": "select",
+      "default_value": "active",
+      "select_options": {
+        "active": {
+          "name_fa": "فعال",
+          "class": "bg-success"
+        },
+        "deactivate": {
+          "name_fa": "غیر فعال",
+          "class": "bg-danger"
+        }
+      },
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "max:255"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "select"
+        },
+        "add": {
+          "name": "select"
+        },
+        "edit": {
+          "name": "select"
+        }
+      }
+    },
+    "name": {
+      "name_fa": "لینک",
+      "slug_link": "/branch/",
+      "slug_to": "display_name",
+      "sections": {
+        "all": true,
+        "add": true,
+        "edit": true
+      },
+      "type": "slug",
+      "requests": {
+        "edit_submit": {
+          "status": true,
+          "types": "required|max:255"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "link"
+        },
+        "add": {
+          "name": "text"
+        },
+        "edit": {
+          "name": "text"
+        }
+      }
+
+
+    },
+    "content": {
+      "name_fa": "توضیحات",
+      "sections": {
+        "add": true,
+        "edit": true
+      },
+      "type": "text",
+      "requests": {
+        "add_submit": {
+          "status": false,
+          "types": "required"
+        },
+        "edit_submit": {
+          "status": false,
+          "types": "required"
+        }
+      },
+      "templates": {
+        "add": {
+          "name": "textarea-tinymce",
+          "properties": {
+            "rows": "24"
+          }
+        },
+        "edit": {
+          "name": "textarea-tinymce",
+          "properties": {
+            "rows": "24"
+          }
+        }
+      }
+    }
+
+  }
+}

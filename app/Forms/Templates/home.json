@@ -1,0 +1,181 @@
+{
+    "title": "خانه",
+    "type": "object",
+    "required": [
+        "main_slider",
+        "bestOffers",
+        "app_services",
+        "sellGame",
+        "giftCard"
+    ],
+    "properties": {
+        "main_slider": {
+            "title": "اسلایدر اصلی",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "title": "اسلایدر",
+                "properties": {
+                    "img": {
+                        "title": "لینک عکس",
+                        "type": "string"
+                    },
+                    "title": {
+                        "title": "سرتیتر",
+                        "type": "string"
+                    },
+                    "description_desktop": {
+                        "title": "متن در حالت دسکتاپ",
+                        "type": "string"
+                    },
+                    "description_mobile": {
+                        "title": "متن در حالت موبایل",
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "bestOffers": {
+            "title": "پیشنهادات ویژه",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "title": "پیشنهاد",
+                "properties": {
+                    "img": {
+                        "title": "لینک عکس",
+                        "type": "string"
+                    },
+                    "title": {
+                        "title": "سرتیتر",
+                        "type": "string"
+                    },
+                    "description": {
+                        "title": "توضیح",
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "app_services": {
+            "title": "خدمات درون برنامه ای",
+            "type": "object",
+            "required": [
+                "more_link",
+                "items"
+            ],
+            "properties": {
+                "more_link": {
+                    "title": "لینک بیشتر",
+                    "type": "string"
+                },
+                "items": {
+                    "title": "ایتم ها",
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "title": "ایتم",
+                        "properties": {
+                            "id": {
+                                "title": "ایدی ایتم",
+                                "type": "number"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "sellGame": {
+            "title": "فروش بازی",
+            "type": "object",
+            "required": [
+                "more_link",
+                "items"
+            ],
+            "properties": {
+                "more_link": {
+                    "title": "لینک بیشتر",
+                    "type": "string"
+                },
+                "items": {
+                    "title": "ایتم ها",
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "title": "ایتم",
+                        "properties": {
+                            "title": {
+                                "title": "سرتیتر",
+                                "type": "string"
+                            },
+                            "href": {
+                                "title": "لینک",
+                                "type": "string"
+                            },
+                            "img": {
+                                "title": "عکس",
+                                "type": "string"
+                            },
+                            "description": {
+                                "title": "توضیح",
+                                "type": "string"
+                            },
+                            "tag": {
+                                "title": "تگ ها",
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "title": "تگ",
+                                    "properties": {
+                                        "title": {
+                                            "title": "سرتیتر",
+                                            "type": "string"
+                                        },
+                                        "href": {
+                                            "title": "لینک",
+                                            "type": "string"
+                                        },
+                                        "color": {
+                                            "title": "رنگ",
+                                            "type": "string",
+                                            "format": "color",
+                                            "default": "#ffa500"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "giftCard": {
+            "title": "گیفت کارت ها",
+            "type": "object",
+            "required": [
+                "more_link",
+                "items"
+            ],
+            "properties": {
+                "more_link": {
+                    "title": "لینک بیشتر",
+                    "type": "string"
+                },
+                "items": {
+                    "title": "ایتم ها",
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "title": "ایتم",
+                        "properties": {
+                            "id": {
+                                "title": "ایدی ایتم",
+                                "type": "number"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

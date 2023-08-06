@@ -1,0 +1,585 @@
+{
+    "view_path_all": "admin.vendors.sections.all",
+    "view_path_add": "admin.vendors.sections.add",
+    "view_path_edit": "admin.vendors.sections.edit",
+    "main_name": "app_service_category",
+    "template_title": "دسته بندی محصولات - خدمات درون برنامه ای",
+    "route_name": "admin.app_service_category",
+    "item_name": "ایتم",
+    "item_name_sum": "ایتم ها",
+    "table": "appService_categories",
+    "sections": {
+        "add": true,
+        "edit": true,
+        "delete": true,
+        "multiple_delete": true
+    },
+    "fields": {
+        "id": {
+            "name_fa": "شماره",
+            "sections": {
+                "all": true,
+                "search": true
+            },
+            "templates": {
+                "all": {
+                    "name": "text"
+                }
+            }
+        },
+        "index": {
+            "name_fa": "شماره ردیف",
+            "type": "text",
+            "default_value": "9999999",
+            "sections": {
+                "all": true,
+                "add": true,
+                "edit": true,
+                "search": false
+            },
+            "requests": [],
+            "templates": {
+                "all": {
+                    "name": "text"
+                },
+                "add": {
+                    "name": "number"
+                },
+                "edit": {
+                    "name": "number"
+                }
+            }
+        },
+        "icon": {
+            "name_fa": "ایکون",
+            "sections": {
+                "all": true,
+                "add": true,
+                "edit": true
+            },
+            "type": "img",
+            "path_db": "/uploads/",
+            "path_folder": "/public/uploads",
+            "requests": {
+                "add_submit": {
+                    "status": true,
+                    "types": "required|image|mimes:jpeg,png,jpg,ico|max:20048"
+                },
+                "edit_submit": {
+                    "status": true,
+                    "types": "image|mimes:jpeg,png,jpg,ico|max:20048"
+                }
+            },
+            "templates": {
+                "all": {
+                    "name": "img"
+                },
+                "add": {
+                    "name": "img"
+                },
+                "edit": {
+                    "name": "img"
+                }
+            }
+        },
+        "name": {
+            "name_fa": "نام دسته بندی",
+            "sections": {
+                "all": true,
+                "add": true,
+                "edit": true,
+                "search": true
+            },
+            "type": "text",
+            "requests": {
+                "add_submit": {
+                    "status": true,
+                    "types": "required|max:255"
+                },
+                "edit_submit": {
+                    "status": true,
+                    "types": "required|max:255"
+                }
+            },
+            "templates": {
+                "all": {
+                    "name": "text"
+                },
+                "add": {
+                    "name": "text"
+                },
+                "edit": {
+                    "name": "text"
+                }
+            }
+        },
+        "title": {
+            "name_fa": "سرتیتر",
+            "sections": {
+                "all": true,
+                "add": true,
+                "edit": true,
+                "search": true
+            },
+            "type": "text",
+            "requests": {
+                "add_submit": {
+                    "status": true,
+                    "types": "required|max:255"
+                },
+                "edit_submit": {
+                    "status": true,
+                    "types": "required|max:255"
+                }
+            },
+            "templates": {
+                "all": {
+                    "name": "text"
+                },
+                "add": {
+                    "name": "text"
+                },
+                "edit": {
+                    "name": "text"
+                }
+            }
+        },
+        "platform": {
+            "name_fa": "پلتفرم",
+            "sections": {
+                "all": true,
+                "add": true,
+                "edit": true,
+                "search": false
+            },
+            "type": "select",
+            "select_options": {
+                "mobile": {
+                    "name_fa": "موبایل",
+                    "class": "bg-success"
+                },
+                "pc": {
+                    "name_fa": "کامپیوتر",
+                    "class": "bg-danger"
+                }
+            },
+            "requests": {
+                "add_submit": {
+                    "status": true,
+                    "types": "required|max:255"
+                },
+                "edit_submit": {
+                    "status": true,
+                    "types": "required|max:255"
+                }
+            },
+            "templates": {
+                "all": {
+                    "name": "select"
+                },
+                "add": {
+                    "name": "select"
+                },
+                "edit": {
+                    "name": "select"
+                }
+            }
+        },
+        "category": {
+            "name_fa": "نوع دسته بندی",
+            "sections": {
+                "all": true,
+                "add": true,
+                "edit": true,
+                "search": false
+            },
+            "type": "select",
+            "select_options": {
+                "game": {
+                    "name_fa": "بازی",
+                    "class": "bg-success"
+                },
+                "premium_subscription": {
+                    "name_fa": "اشتراک پریمیوم",
+                    "class": "bg-danger"
+                }
+            },
+            "requests": {
+                "add_submit": {
+                    "status": true,
+                    "types": "required|max:255"
+                },
+                "edit_submit": {
+                    "status": true,
+                    "types": "required|max:255"
+                }
+            },
+            "templates": {
+                "all": {
+                    "name": "select"
+                },
+                "add": {
+                    "name": "select"
+                },
+                "edit": {
+                    "name": "select"
+                }
+            }
+        },
+        "slug": {
+            "name_fa": "لینک",
+            "slug_link": "http://localhost:8080/app-service/",
+            "slug_to": "title",
+            "sections": {
+                "all": true,
+                "add": true,
+                "edit": true
+            },
+            "type": "slug",
+            "requests": {
+                "edit_submit": {
+                    "status": true,
+                    "types": "required|max:255"
+                }
+            },
+            "templates": {
+                "all": {
+                    "name": "link"
+                },
+                "add": {
+                    "name": "text"
+                },
+                "edit": {
+                    "name": "text"
+                }
+            }
+        },
+        "img": {
+            "name_fa": "عکس",
+            "sections": {
+                "all": false,
+                "add": true,
+                "edit": true
+            },
+            "type": "img",
+            "path_db": "/uploads/",
+            "path_folder": "/public/uploads/",
+            "requests": {
+                "add_submit": {
+                    "status": true,
+                    "types": "required|image|mimes:jpeg,png,jpg,ico|max:20048"
+                },
+                "edit_submit": {
+                    "status": true,
+                    "types": "image|mimes:jpeg,png,jpg,ico|max:20048"
+                }
+            },
+            "templates": {
+                "add": {
+                    "name": "img"
+                },
+                "edit": {
+                    "name": "img"
+                }
+            }
+        },
+        "banner": {
+            "name_fa": "بنر",
+            "sections": {
+                "all": false,
+                "add": true,
+                "edit": true
+            },
+            "type": "img",
+            "path_db": "/uploads/",
+            "path_folder": "/public/uploads",
+            "requests": {
+                "add_submit": {
+                    "status": true,
+                    "types": "required|image|mimes:jpeg,png,jpg,ico|max:20048"
+                },
+                "edit_submit": {
+                    "status": true,
+                    "types": "image|mimes:jpeg,png,jpg,ico|max:20048"
+                }
+            },
+            "templates": {
+                "add": {
+                    "name": "img"
+                },
+                "edit": {
+                    "name": "img"
+                }
+            }
+        },
+        "tags": {
+            "name_fa": "تگ ها",
+            "sections": {
+                "add": true,
+                "edit": true
+            },
+            "type": "text",
+            "requests": {
+                "add_submit": {
+                    "status": false,
+                    "types": "max:255"
+                },
+                "edit_submit": {
+                    "status": false,
+                    "types": "max:255"
+                }
+            },
+            "templates": {
+                "add": {
+                    "name": "textarea",
+                    "properties": {
+                        "rows": "3"
+                    }
+                },
+                "edit": {
+                    "name": "textarea",
+                    "properties": {
+                        "rows": "3"
+                    }
+                }
+            }
+        },
+        "discount_status": {
+            "name_fa": "وضعیت تخفیف",
+            "sections": {
+                "add": true,
+                "edit": true
+            },
+            "type": "select",
+            "default_value": "deactivate",
+            "select_options": {
+                "active": {
+                    "name_fa": "فعال",
+                    "class": "bg-success"
+                },
+                "deactivate": {
+                    "name_fa": "غیر فعال",
+                    "class": "bg-danger"
+                }
+            },
+            "requests": {
+                "add_submit": {
+                    "status": true,
+                    "types": "max:255"
+                },
+                "edit_submit": {
+                    "status": true,
+                    "types": "max:255"
+                }
+            },
+            "templates": {
+                "add": {
+                    "name": "select"
+                },
+                "edit": {
+                    "name": "select"
+                }
+            }
+        },
+        "summery": {
+            "name_fa": "خلاصه",
+            "sections": {
+                "add": true,
+                "edit": true
+            },
+            "type": "text",
+            "requests": {
+                "add_submit": {
+                    "status": true,
+                    "types": "required"
+                },
+                "edit_submit": {
+                    "status": true,
+                    "types": "required"
+                }
+            },
+            "templates": {
+                "add": {
+                    "name": "textarea",
+                    "properties": {
+                        "rows": "6"
+                    }
+                },
+                "edit": {
+                    "name": "textarea",
+                    "properties": {
+                        "rows": "6"
+                    }
+                }
+            }
+        },
+        "regions": {
+            "name_fa": "ریجن ها",
+            "sections": {
+                "add": true,
+                "edit": true
+            },
+            "section_ref": "regions",
+            "select_options": {
+                "key": "name",
+                "value": [
+                    "name_fa",
+                    "flag"
+                ]
+            },
+            "type": "multiple-select",
+            "requests": {
+                "add_submit": {
+                    "status": true,
+                    "types": "max:255"
+                },
+                "edit_submit": {
+                    "status": true,
+                    "types": "max:255"
+                }
+            },
+            "templates": {
+                "add": {
+                    "name": "multiple-select-ref"
+                },
+                "edit": {
+                    "name": "multiple-select-ref"
+                }
+            }
+        },
+        "notice": {
+            "name_fa": "اطلاعیه",
+            "sections": {
+                "add": true,
+                "edit": true
+            },
+            "type": "text",
+            "requests": {
+                "add_submit": {
+                    "status": false,
+                    "types": "required"
+                },
+                "edit_submit": {
+                    "status": false,
+                    "types": "required"
+                }
+            },
+            "templates": {
+                "add": {
+                    "name": "textarea",
+                    "properties": {
+                        "rows": "3"
+                    }
+                },
+                "edit": {
+                    "name": "textarea",
+                    "properties": {
+                        "rows": "3"
+                    }
+                }
+            }
+        },
+        "warnings": {
+            "name_fa": "هشدار ها",
+            "sections": {
+                "add": true,
+                "edit": true
+            },
+            "type": "json",
+            "json_pattern": {
+                "title": " ",
+                "type": "array",
+                "format": "table",
+                "items": {
+                    "title": "متن هر خط",
+                    "type": "string"
+                }
+            },
+            "requests": {
+                "add_submit": {
+                    "status": false,
+                    "types": "required"
+                },
+                "edit_submit": {
+                    "status": false,
+                    "types": "required"
+                }
+            },
+            "templates": {
+                "add": {
+                    "name": "json"
+                },
+                "edit": {
+                    "name": "json"
+                }
+            }
+        },
+        "purchase_descriptions": {
+            "name_fa": "توضیحات خرید",
+            "sections": {
+                "add": true,
+                "edit": true
+            },
+            "type": "json",
+            "json_pattern": {
+                "title": " ",
+                "type": "array",
+                "format": "table",
+                "items": {
+                    "title": "متن هر خط",
+                    "type": "string"
+                }
+            },
+            "requests": {
+                "add_submit": {
+                    "status": false,
+                    "types": "required"
+                },
+                "edit_submit": {
+                    "status": false,
+                    "types": "required"
+                }
+            },
+            "templates": {
+                "add": {
+                    "name": "json"
+                },
+                "edit": {
+                    "name": "json"
+                }
+            }
+        },
+        "content": {
+            "name_fa": "توضیحات",
+            "sections": {
+                "add": true,
+                "edit": true
+            },
+            "type": "text",
+            "requests": {
+                "add_submit": {
+                    "status": false,
+                    "types": "required"
+                },
+                "edit_submit": {
+                    "status": false,
+                    "types": "required"
+                }
+            },
+            "templates": {
+                "add": {
+                    "name": "textarea-tinymce",
+                    "properties": {
+                        "rows": "24"
+                    }
+                },
+                "edit": {
+                    "name": "textarea-tinymce",
+                    "properties": {
+                        "rows": "24"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,461 @@
+{
+  "template_title": "مقالات",
+  "table": "articles",
+  "sections": {
+    "all": true,
+    "add": true,
+    "edit": true,
+    "delete": true,
+    "multiple_delete": true
+  },
+  "fields": {
+    "id": {
+      "name_fa": "شماره",
+      "sections": {
+        "all": true,
+        "search": true
+      },
+      "templates": {
+        "all": {
+          "name": "text"
+        }
+      }
+    },
+    "title": {
+      "name_fa": "سرتیتر",
+      "sections": {
+        "all": true,
+        "add": true,
+        "edit": true,
+        "search": true
+      },
+      "type": "text",
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "required|max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "required|max:255"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "text"
+        },
+        "add": {
+          "name": "text"
+        },
+        "edit": {
+          "name": "text"
+        }
+      }
+    },
+    "status": {
+      "name_fa": "وضعیت",
+      "sections": {
+        "all": true,
+        "add": true,
+        "edit": true
+      },
+      "type": "select",
+      "default_value": "active",
+      "select_options": {
+        "active": {
+          "name_fa": "فعال",
+          "class": "bg-success"
+        },
+        "deactivate": {
+          "name_fa": "غیر فعال",
+          "class": "bg-danger"
+        }
+      },
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "max:255"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "select"
+        },
+        "add": {
+          "name": "select"
+        },
+        "edit": {
+          "name": "select"
+        }
+      }
+    },
+    "slug": {
+      "name_fa": "لینک",
+      "slug_link": "/product-category/",
+      "slug_to": "title",
+      "sections": {
+        "all": true,
+        "add": true,
+        "edit": true
+      },
+      "type": "slug",
+      "requests": {
+        "edit_submit": {
+          "status": true,
+          "types": "required|max:255"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "link"
+        },
+        "add": {
+          "name": "text"
+        },
+        "edit": {
+          "name": "text"
+        }
+      }
+    },
+    "wp_post_id": {
+      "name_fa": "ایدی پست ورد پرس",
+      "sections": {
+        "add": true,
+        "edit": true
+      },
+      "type": "number",
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "max:255"
+        }
+      },
+      "templates": {
+        "add": {
+          "name": "number"
+        },
+        "edit": {
+          "name": "number"
+        }
+      }
+    },
+    "source_type": {
+      "name_fa": "سورس مطالب",
+      "tip": "با این فیلد مشخص میکند که برای محتویات توضیحات از ویرایش گر متن لاراول کنید یا  وردپرس .",
+      "sections": {
+        "add": true,
+        "edit": true
+      },
+      "type": "select",
+      "default_value": "laravel",
+      "select_options": {
+        "laravel": {
+          "name_fa": "لاراول",
+          "class": "bg-success"
+        },
+        "wp": {
+          "name_fa": "ورد پرس",
+          "class": "bg-danger"
+        }
+      },
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "max:255"
+        }
+      },
+      "templates": {
+        "add": {
+          "name": "select"
+        },
+        "edit": {
+          "name": "select"
+        }
+      }
+    },
+    "author_id": {
+      "name_fa": "ایدی نویسنده",
+      "sections": {
+        "all": true
+      },
+      "type": "text",
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "required|max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "required|max:255"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "text"
+        },
+        "single": {
+          "name": "text"
+        },
+        "edit": {
+          "name": "text"
+        }
+      }
+    },
+    "poster": {
+      "name_fa": "پوستر",
+      "sections": {
+        "add": true,
+        "edit": true
+      },
+      "type": "img",
+      "path_db": "/uploads/",
+      "path_folder": "/uploads/",
+      "path_folder_type": "public",
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "required|image|mimes:jpeg,png,jpg,ico|max:20048"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "image|mimes:jpeg,png,jpg,ico|max:20048"
+        }
+      },
+      "templates": {
+        "add": {
+          "name": "img"
+        },
+        "edit": {
+          "name": "img"
+        }
+      }
+    },
+    "img_link": {
+      "name_fa": "عکس اصلی",
+      "sections": {
+        "add": true,
+        "edit": true
+      },
+      "type": "img",
+      "path_db": "/uploads/",
+      "path_folder": "/uploads/",
+      "path_folder_type": "public",
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "required|image|mimes:jpeg,png,jpg,ico|max:20048"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "image|mimes:jpeg,png,jpg,ico|max:20048"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "img"
+        },
+        "add": {
+          "name": "img"
+        },
+        "edit": {
+          "name": "img"
+        }
+      }
+    },
+    "article_category": {
+      "name_fa": "دسته بندی مقاله",
+      "sections": {
+        "all": true,
+        "add": true,
+        "edit": true
+      },
+      "type": "select",
+      "default_value": "article",
+      "select_options": {
+        "article": {
+        "name_fa": "مقاله اموزشی",
+        "class": "bg-info"
+      },
+        "tutorial": {
+          "name_fa": "پست خبری",
+          "class": "bg-success"
+        }
+      },
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "max:255"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "select"
+        },
+        "add": {
+          "name": "select"
+        },
+        "edit": {
+          "name": "select"
+        }
+      }
+    },
+    "share_link_1": {
+      "name_fa": "لینک اشتراک ۱",
+      "sections": {
+        "add": true,
+        "edit": true
+      },
+      "type": "text",
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "max:255"
+        }
+      },
+      "templates": {
+        "add": {
+          "name": "text"
+        },
+        "edit": {
+          "name": "text"
+        }
+      }
+    },
+    "share_link_2": {
+      "name_fa": "لینک اشتراک ۲",
+      "sections": {
+        "add": true,
+        "edit": true
+      },
+      "type": "text",
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "max:255"
+        }
+      },
+      "templates": {
+        "add": {
+          "name": "text"
+        },
+        "edit": {
+          "name": "text"
+        }
+      }
+    },
+    "share_link_3": {
+      "name_fa": "لینک اشتراک ۳",
+      "sections": {
+        "add": true,
+        "edit": true
+      },
+      "type": "text",
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "max:255"
+        }
+      },
+      "templates": {
+        "add": {
+          "name": "text"
+        },
+        "edit": {
+          "name": "text"
+        }
+      }
+    },
+    "summery": {
+      "name_fa": "خلاصه",
+      "sections": {
+        "add": true,
+        "edit": true
+      },
+      "type": "text",
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "required"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "required"
+        }
+      },
+      "templates": {
+        "add": {
+          "name": "textarea",
+          "properties": {
+            "rows": "6"
+          }
+        },
+        "edit": {
+          "name": "textarea",
+          "properties": {
+            "rows": "6"
+          }
+        }
+      }
+    },
+    "content": {
+      "name_fa": "توضیحات",
+      "sections": {
+        "add": true,
+        "edit": true
+      },
+      "type": "text",
+      "requests": {
+        "add_submit": {
+          "status": false,
+          "types": "required"
+        },
+        "edit_submit": {
+          "status": false,
+          "types": "required"
+        }
+      },
+      "templates": {
+        "add": {
+          "name": "textarea-tinymce",
+          "properties": {
+            "rows": "24"
+          }
+        },
+        "edit": {
+          "name": "textarea-tinymce",
+          "properties": {
+            "rows": "24"
+          }
+        }
+      }
+    }
+  }
+}

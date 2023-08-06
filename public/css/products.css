@@ -1,0 +1,110 @@
+.body-main-products-con {
+    padding: 0 !important;
+}
+.body-main-products-row {
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    border-radius: 20px;
+    margin: 0 !important;
+    background-color: white;
+    display: flex;
+}
+.body-main-products-row .body {
+    margin: 20px;
+    justify-content: center;
+}
+
+.body-main-products-row .body > a .product div:nth-child(1):hover img{ width: 110%;}
+.body-main-products-row .body > a .product {
+    height: 371px;
+    margin: 37px;
+    box-shadow: 0px 0px 33px 0px rgba(0, 0, 0, 0.2);
+    display: flex;
+    cursor: default;
+    flex-direction: column;
+    background-color: whitesmoke;
+    overflow: hidden;
+    width: 290px;
+    transition: all 0.5s;
+    border-radius: 25px;
+}
+
+.body-main-products-row .body > a .product div:nth-child(1) img {
+    width: 100%;
+    transition: all 0.5s;
+    margin-bottom: 20px;
+}
+.body-main-products-row .body > a .product:hover{
+    box-shadow: 0px 0px 33px 14px rgba(0, 0, 0, 0.2);
+}
+.body-main-products-row .body > a .product div:nth-child(1):hover{
+    box-shadow: 0px 0px 33px 14px rgba(0, 0, 0, 0.2);
+}
+.body-main-products-row .body > a .product div:nth-child(1) {
+    height: 60%;
+    display: flex;
+    overflow: hidden;
+    border-radius: 0px 0px 20px 20px;
+    justify-content: center;
+    transition: all 0.5s;
+    align-items: center;
+    width: 100%;
+}
+.body-main-products-row .body > a .product div:nth-child(2) h5 {
+    color: black;
+}
+.body-main-products-row .body > a .product div:nth-child(2) {
+    display: flex;
+    height: 20%;
+    justify-content: center;
+    padding-top: 21px;
+    width: 100%;
+    align-items: center;
+}
+.body-main-products-row .body > a .product div:nth-child(3) span {
+    justify-content: center;
+    border-radius: 19px;
+    padding-bottom: 6px;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    background: #00bceb;
+    padding-top: 3px;
+    color: white;
+}
+.body-main-products-row .body > a .product div:nth-child(3) {
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.body-main-products-row .head {
+    height: 60px;
+    background-color: #a2a2a2;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.body-main-products-row .head h3 {
+    color: white;
+}
+@media only screen and (max-width:853px){
+    .body-main-products-row .body > a .product{
+
+        height: 297px;
+
+        width: 222px;
+    }
+}@media only screen and (max-width:384px){
+    .body-main-products-row .body > a .product{
+
+        height: 309px;
+
+        width: 178px;
+
+    }
+}

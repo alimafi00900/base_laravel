@@ -1,0 +1,39 @@
+{
+    "name": "user_menu",
+    "title": "منو کاربران",
+    "type": "array",
+    "uniqueItems": true,
+    "items": {
+        "type": "object",
+        "title": "منو",
+        "properties": {
+            "name_fa": {
+                "title": "نام فارسی",
+                "type": "string"
+            },
+            "name": {
+                "title": "نام انگلیسی",
+                "type": "string"
+            },
+            "section": {
+                "title": "بخش",
+                "type": "string",
+                "enum": [
+                    "header",
+                    "sidebar",
+                    "footer"
+                ],
+                "default": "header"
+            },
+            "link": {
+                "title": "لینک",
+                "type": "string"
+            },
+            "icon": {
+                "title": "مسیر ایکون",
+                "type": "string"
+            }
+
+        }
+    }
+}

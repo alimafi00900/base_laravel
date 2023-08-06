@@ -1,0 +1,451 @@
+{
+  "template_title": "مدیریت ادمین ها",
+  "table": "admin_users",
+  "sections": {
+    "all": true,
+    "add": true,
+    "edit": true,
+    "delete": true,
+    "multiple_delete": true
+  },
+  "fields": {
+    "id": {
+      "name_fa": "شماره",
+      "sections": {
+        "all": true,
+        "search": true
+      },
+      "templates": {
+        "all": {
+          "name": "text"
+        }
+      }
+    },
+    "name": {
+      "name_fa": "نام نمایشی",
+      "sections": {
+        "all": true,
+        "add": true,
+        "edit": true,
+        "search": true
+      },
+      "type": "text",
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "required|max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "required|max:255"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "text"
+        },
+        "add": {
+          "name": "text"
+        },
+        "edit": {
+          "name": "text"
+        }
+      }
+    },
+    "telegram_chat_id": {
+      "name_fa": "ایدی تلگرام",
+      "sections": {
+        "all": true,
+        "add": true,
+        "edit": true
+      },
+      "type": "text",
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "max:255"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "text"
+        },
+        "add": {
+          "name": "text"
+        },
+        "edit": {
+          "name": "text"
+        }
+      }
+    },
+    "phone_number": {
+      "name_fa": "شماره همراه",
+      "sections": {
+        "all": true,
+        "add": true,
+        "edit": true,
+        "search": true
+      },
+      "type": "phone_number",
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "required|max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "required|max:255"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "text"
+        },
+        "add": {
+          "name": "text"
+        },
+        "edit": {
+          "name": "text"
+        }
+      }
+    },
+    "status": {
+      "name_fa": "وضعیت",
+      "sections": {
+        "all": true,
+        "add": true,
+        "edit": true
+      },
+      "type": "select",
+      "default_value": "active",
+      "select_options": {
+        "active": {
+          "name_fa": "فعال",
+          "class": "bg-success"
+        },
+        "deactivate": {
+          "name_fa": "غیر فعال",
+          "class": "bg-danger"
+        }
+      },
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "max:255"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "select"
+        },
+        "add": {
+          "name": "select"
+        },
+        "edit": {
+          "name": "select"
+        }
+      }
+    },
+    "user_auth_notif_status": {
+      "name_fa": "نوتیف احراز هویت",
+      "sections": {
+        "all": true,
+        "add": true,
+        "edit": true
+      },
+      "type": "select",
+      "default_value": "deactivate",
+      "select_options": {
+        "active": {
+          "name_fa": "فعال",
+          "class": "bg-success"
+        },
+        "deactivate": {
+          "name_fa": "غیر فعال",
+          "class": "bg-danger"
+        }
+      },
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "max:255"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "select"
+        },
+        "add": {
+          "name": "select"
+        },
+        "edit": {
+          "name": "select"
+        }
+      }
+    },
+    "marketer_withdraw_notif_status": {
+      "name_fa": "نوتیف برداشت پول بازاریاب",
+      "sections": {
+        "all": true,
+        "add": true,
+        "edit": true
+      },
+      "type": "select",
+      "default_value": "deactivate",
+      "select_options": {
+        "active": {
+          "name_fa": "فعال",
+          "class": "bg-success"
+        },
+        "deactivate": {
+          "name_fa": "غیر فعال",
+          "class": "bg-danger"
+        }
+      },
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "max:255"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "select"
+        },
+        "add": {
+          "name": "select"
+        },
+        "edit": {
+          "name": "select"
+        }
+      }
+    },
+    "role": {
+      "name_fa": "نقش",
+      "sections": {
+        "all": true,
+        "add": true,
+        "edit": true
+      },
+      "type": "select",
+      "default_value": "sub_admin",
+      "select_options": {
+        "master_admin": {
+          "name_fa": "اصلی",
+          "class": "bg-success"
+        },
+        "sub_admin": {
+          "name_fa": "زیرشاخه",
+          "class": "bg-info"
+        }
+      },
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "max:255"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "select"
+        },
+        "add": {
+          "name": "select"
+        },
+        "edit": {
+          "name": "select"
+        }
+      }
+    },
+    "email": {
+      "name_fa": "ایمیل",
+      "sections": {
+        "all": true,
+        "add": true,
+        "edit": true,
+        "search": true
+      },
+      "type": "text",
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "required|email|max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "required|email|max:255"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "text"
+        },
+        "add": {
+          "name": "text"
+        },
+        "edit": {
+          "name": "text"
+        }
+      }
+    },
+    "password": {
+      "name_fa": "پسورد",
+      "sections": {
+        "add": true,
+        "edit": true
+      },
+      "type": "password",
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "required|max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "max:255"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "text"
+        },
+        "add": {
+          "name": "password"
+        },
+        "edit": {
+          "name": "password"
+        }
+      }
+    },
+    "productCategory_filter_status": {
+      "name_fa": "دسترسی به دسته بندی خاص",
+      "sections": {
+        "add": true,
+        "edit": true
+      },
+      "type": "select",
+      "default_value": "active",
+      "select_options": {
+        "true": {
+          "name_fa": "فعال",
+          "class": "bg-success"
+        },
+        "false": {
+          "name_fa": "غیر فعال",
+          "class": "bg-danger"
+        }
+      },
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "max:255"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "select"
+        },
+        "add": {
+          "name": "select"
+        },
+        "edit": {
+          "name": "select"
+        }
+      }
+    } ,
+    "product_filter_status": {
+      "name_fa": "دسترسی به محصول خاص",
+      "sections": {
+        "add": true,
+        "edit": true
+      },
+      "type": "select",
+      "default_value": "active",
+      "select_options": {
+        "true": {
+          "name_fa": "فعال",
+          "class": "bg-success"
+        },
+        "false": {
+          "name_fa": "غیر فعال",
+          "class": "bg-danger"
+        }
+      },
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "max:255"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "select"
+        },
+        "add": {
+          "name": "select"
+        },
+        "edit": {
+          "name": "select"
+        }
+      }
+    },
+    "product_category_ids": {
+      "name_fa": "",
+      "sections": {
+        "add": true,
+        "edit": true
+      },
+      "type": "text",
+      "templates": {
+      }
+    },
+    "product_ids": {
+      "name_fa": "",
+      "sections": {
+        "add": true,
+        "edit": true
+      },
+      "type": "text",
+      "templates": {
+      }
+    },
+    "permissions": {
+      "name_fa": "",
+      "sections": {
+        "add": true,
+        "edit": true
+      },
+      "type": "text",
+      "templates": {
+      }
+    }
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "template_title": "تیکت ها",
+  "table": "user_messages",
+  "sections": {
+    "all": true,
+    "delete": true,
+    "multiple_delete": true
+  },
+  "fields": {
+    "id": {
+      "name_fa": "شماره",
+      "sections": {
+        "all": true,
+        "search": true
+      },
+      "templates": {
+        "all": {
+          "name": "text"
+        }
+      }
+    },
+    "user_id": {
+      "name_fa": "ایدی کابر",
+      "sections": {
+        "all": true
+      },
+      "type": "text",
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "required|max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "required|max:255"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "text"
+        },
+        "single": {
+          "name": "text"
+        },
+        "edit": {
+          "name": "text"
+        }
+      }
+    },
+    "user_name": {
+      "name_fa": "نام کاربری",
+      "sections": {
+        "all": true
+      },
+      "type": "text",
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "required|max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "required|max:255"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "text"
+        },
+        "single": {
+          "name": "text"
+        },
+        "edit": {
+          "name": "text"
+        }
+      }
+    },
+    "title": {
+      "name_fa": "سرتیتر",
+      "sections": {
+        "all": true
+      },
+      "type": "text",
+      "requests": {
+      },
+      "templates": {
+        "all": {
+          "name": "text"
+        },
+        "single": {
+          "name": "text"
+        },
+        "edit": {
+          "name": "text"
+        }
+      }
+    },
+    "status": {
+      "name_fa": "وضعیت",
+      "sections": {
+        "all": true,
+        "add": true,
+        "edit": true
+      },
+      "type": "select",
+      "default_value": "active",
+      "select_options": {
+        "active": {
+          "name_fa": "فعال",
+          "class": "bg-success"
+        },
+        "deactivate": {
+          "name_fa": "غیر فعال",
+          "class": "bg-danger"
+        }
+      },
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "max:255"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "select"
+        },
+        "add": {
+          "name": "select"
+        },
+        "edit": {
+          "name": "select"
+        }
+      }
+    },
+    "content": {
+      "name_fa": "متن",
+      "sections": {
+        "all": true
+      },
+      "type": "text",
+      "requests": {
+      },
+      "templates": {
+        "all": {
+          "name": "text-trim"
+        },
+        "single": {
+          "name": "text"
+        },
+        "edit": {
+          "name": "text"
+        }
+      }
+    },
+    "date_time": {
+      "name_fa": "تاریخ",
+      "sections": {
+        "all": true
+      },
+      "type": "date_time",
+      "templates": {
+        "all": {
+          "name": "date_time"
+        }
+      }
+    }
+  }
+}

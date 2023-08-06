@@ -1,0 +1,495 @@
+{
+  "template_title": "کاربران",
+  "primary_key": "id",
+  "table": "wp_users",
+  "redirect_back_edit": true,
+  "sections": {
+    "all": true,
+    "edit": true,
+    "single": true,
+    "delete": true
+  },
+  "fields": {
+    "id": {
+      "name_fa": "شماره",
+      "sections": {
+        "all": true,
+        "search": true
+      },
+      "templates": {
+        "all": {
+          "name": "text"
+        }
+      }
+    },
+    "display_name": {
+      "name_fa": "نام کاربری",
+      "sections": {
+        "all": true,
+        "search": true,
+        "edit": true,
+        "single": true
+      },
+      "type": "text",
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "required|max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "required|max:255"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "text"
+        },
+        "single": {
+          "name": "text"
+        },
+        "edit": {
+          "name": "text"
+        }
+      }
+    },
+    "status": {
+      "name_fa": "وضعیت",
+      "sections": {
+        "all": true
+      },
+      "type": "select",
+      "default_value": "active",
+      "select_options": {
+        "active": {
+          "name_fa": "فعال",
+          "class": "bg-success"
+        },
+        "suspended": {
+          "name_fa": "معلق",
+          "class": "bg-warning"
+        },
+        "blocked": {
+          "name_fa": "مسدود",
+          "class": "bg-black"
+        }
+      },
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "max:255"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "select"
+        },
+        "add": {
+          "name": "select"
+        },
+        "edit": {
+          "name": "select"
+        }
+      }
+    },
+    "phone_number": {
+      "name_fa": "شماره همراه",
+      "sections": {
+        "all": true,
+        "edit": true,
+        "search": true,
+        "single": true
+      },
+      "type": "text",
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "required|max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "required|max:255"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "text"
+        },
+        "single": {
+          "name": "text"
+        },
+        "edit": {
+          "name": "text"
+        }
+      }
+    },
+    "online_payment_amount": {
+      "name_fa": "واریزی درگاه",
+      "sections": {
+        "all": true
+      },
+      "type": "number",
+      "templates": {
+        "all": {
+          "name": "online_payment_amount"
+        }
+      }
+    },
+    "marketer_link": {
+      "name_fa": "لینک بازار یاب",
+      "sections": {
+        "edit": true
+      },
+      "type": "text",
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "max:255"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "text"
+        },
+        "single": {
+          "name": "text"
+        },
+        "edit": {
+          "name": "text"
+        }
+      }
+    },
+    "marketer_productCategory": {
+      "name_fa": "دسته بندی بازاریاب",
+      "sections": {
+        "edit": true
+      },
+      "type": "str-array",
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "max:255"
+        }
+      },
+      "templates": {
+        "add": {
+          "name": "str-array"
+        },
+        "edit": {
+          "name": "str-array"
+        }
+      }
+    },
+    "marketer_discount": {
+      "name_fa": "درصد تخفیف بازار یاب",
+      "sections": {
+        "edit": true
+      },
+      "type": "text",
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "max:255"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "text"
+        },
+        "single": {
+          "name": "text"
+        },
+        "edit": {
+          "name": "number"
+        }
+      }
+    },
+    "marketer_profit": {
+      "name_fa": "درصد سود بازار یاب",
+      "sections": {
+        "edit": true
+      },
+      "type": "text",
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "max:255"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "text"
+        },
+        "single": {
+          "name": "text"
+        },
+        "edit": {
+          "name": "number"
+        }
+      }
+    },
+    "basic_balance": {
+      "name_fa": "حساب کیف پولی",
+      "sections": {
+        "all": true,
+        "edit": true
+      },
+      "type": "text",
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "max:255"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "price"
+        },
+        "single": {
+          "name": "text"
+        },
+        "edit": {
+          "name": "number"
+        }
+      }
+    },
+    "referral_marketer_id": {
+      "name_fa": "ایدی معرف (بازاریاب)",
+      "sections": {
+        "edit": true
+      },
+      "type": "text",
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "max:255"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "text"
+        },
+        "single": {
+          "name": "text"
+        },
+        "edit": {
+          "name": "text"
+        }
+      }
+    },
+    "basic_point": {
+      "name_fa": "امتیازات",
+      "sections": {
+        "edit": true
+      },
+      "type": "text",
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "max:255"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "text"
+        },
+        "single": {
+          "name": "text"
+        },
+        "edit": {
+          "name": "number"
+        }
+      }
+    },
+    "marketer_balance": {
+      "name_fa": "موجودی حساب بازاریاب",
+      "sections": {
+        "edit": true
+      },
+      "type": "text",
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "max:255"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "text"
+        },
+        "single": {
+          "name": "text"
+        },
+        "edit": {
+          "name": "number"
+        }
+      }
+    },
+    "bank_card_number": {
+      "name_fa": "شماره کارت بانکی",
+      "sections": {
+        "edit": true
+      },
+      "type": "text",
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "max:255"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "text"
+        },
+        "single": {
+          "name": "text"
+        },
+        "edit": {
+          "name": "number"
+        }
+      }
+    },
+    "bank_card_bank_name": {
+      "name_fa": "نام بانکی",
+      "sections": {
+        "edit": true
+      },
+      "type": "text",
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "max:255"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "text"
+        },
+        "single": {
+          "name": "text"
+        },
+        "edit": {
+          "name": "text"
+        }
+      }
+    },
+    "bank_card_owner_name": {
+      "name_fa": "نام دارنده حساب کارت بانکی",
+      "sections": {
+        "edit": true
+      },
+      "type": "text",
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "max:255"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "text"
+        },
+        "single": {
+          "name": "text"
+        },
+        "edit": {
+          "name": "text"
+        }
+      }
+    },
+    "order_count": {
+      "name_fa": "تعداد سفارش",
+      "sections": {
+        "all": true
+      },
+      "type": "text",
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "max:255"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "order_count"
+        }
+      }
+    },
+    "last_ip": {
+      "name_fa": "اخرین ایپی",
+      "sections": {
+        "all": true,
+        "search": true
+      },
+      "templates": {
+        "all": {
+          "name": "text"
+        }
+      }
+    },
+    "date_time": {
+      "name_fa": "تاریخ ثبت نام",
+      "sections": {
+        "all": true
+      },
+      "type": "date_time",
+      "templates": {
+        "all": {
+          "name": "date_time"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "template_title": "امتیازات",
+  "table": "points",
+  "sections": {
+    "all": true,
+    "add": true,
+    "edit": true,
+    "delete": true,
+    "multiple_delete": true
+  },
+  "fields": {
+    "id": {
+      "name_fa": "شماره",
+      "sections": {
+        "all": true,
+        "search": true
+      },
+      "templates": {
+        "all": {
+          "name": "text"
+        }
+      }
+    },
+    "min_amount":  {
+      "name_fa": "قیمت از",
+      "sections": {
+        "all": true,
+        "add": true,
+        "edit": true
+      },
+      "type": "text",
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "required|max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "required|max:255"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "price"
+        },
+        "add": {
+          "name": "number"
+        },
+        "edit": {
+          "name": "number"
+        }
+      }
+    },
+    "max_amount": {
+      "name_fa": "قیمت تا",
+      "sections": {
+        "all": true,
+        "add": true,
+        "edit": true
+      },
+      "type": "text",
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "required|max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "required|max:255"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "price"
+        },
+        "add": {
+          "name": "number"
+        },
+        "edit": {
+          "name": "number"
+        }
+      }
+    },
+    "point": {
+      "name_fa": "امتیاز",
+      "sections": {
+        "all": true,
+        "add": true,
+        "edit": true
+      },
+      "type": "text",
+      "requests": {
+        "add_submit": {
+          "status": true,
+          "types": "required|max:255"
+        },
+        "edit_submit": {
+          "status": true,
+          "types": "required|max:255"
+        }
+      },
+      "templates": {
+        "all": {
+          "name": "text"
+        },
+        "add": {
+          "name": "number"
+        },
+        "edit": {
+          "name": "number"
+        }
+      }
+    }
+  }
+}

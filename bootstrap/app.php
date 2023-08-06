@@ -25,6 +25,10 @@ $app = new Illuminate\Foundation\Application(
 | incoming requests to this application from both the web and CLI.
 |
 */
+//$app->instance('path.storage', constant('CORE_DIR_CUSTOM') . "/storage");
+//$app->instance('path.public', constant('PUBLIC_DIR'));
+
+
 
 $app->singleton(
     Illuminate\Contracts\Http\Kernel::class,

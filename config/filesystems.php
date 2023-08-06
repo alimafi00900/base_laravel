@@ -42,6 +42,24 @@ return [
             'visibility' => 'public',
         ],
 
+
+        'minio' => [
+            'driver' => 'minio',
+            'key' => env('MINIO_KEY', 'your minio server key'),
+            'secret' => env('MINIO_SECRET', 'your minio server secret'),
+            'region' => 'us-east-1',
+            'bucket' => env('MINIO_BUCKET','your minio bucket name'),
+            'endpoint' => env('MINIO_ENDPOINT','http://localhost:9000')
+        ],
+
+        'parent_disk'=>[
+            'driver' => 'local',
+
+            // This should be a correct absolute path, so change it with yours
+            'root'   => '/root/irannova/web/wp2.irannova.shop/public/',
+            'visibility' => 'public',
+        ] ,
+
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),

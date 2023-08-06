@@ -4,6 +4,19 @@ use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
 
 define('LARAVEL_START', microtime(true));
+header('Access-Control-Allow-Origin: *');
+####################
+
+define('PUBLIC_DIR',__DIR__."/..");
+define('APP_DIR_CUSTOM',__DIR__."/..");
+
+#################
+$app_DIR=constant('APP_DIR_CUSTOM');
+
+//$core_DIR=constant('CORE_DIR_CUSTOM');
+$core_DIR=$app_DIR;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,8 +29,8 @@ define('LARAVEL_START', microtime(true));
 |
 */
 
-if (file_exists(__DIR__.'/../storage/framework/maintenance.php')) {
-    require __DIR__.'/../storage/framework/maintenance.php';
+if (file_exists($core_DIR.'/storage/framework/maintenance.php')) {
+    require $core_DIR.'/storage/framework/maintenance.php';
 }
 
 /*
@@ -31,7 +44,7 @@ if (file_exists(__DIR__.'/../storage/framework/maintenance.php')) {
 |
 */
 
-require __DIR__.'/../vendor/autoload.php';
+require $app_DIR.'/vendor/autoload.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -44,7 +57,7 @@ require __DIR__.'/../vendor/autoload.php';
 |
 */
 
-$app = require_once __DIR__.'/../bootstrap/app.php';
+$app = require_once $app_DIR.'/bootstrap/app.php';
 
 $kernel = $app->make(Kernel::class);
 
